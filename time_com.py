@@ -1,12 +1,12 @@
 
 
 
-#O(N)
+# overall time complexity = O(N)
 def solution(string):
     return string[::-1]    #O(N) runs through length of the string
 
 
-#O(N)
+# overall time complexity = O(N)
 def positive_sum(arr):
     c = 0                  #O(1)
     for a in arr:          #O(N)
@@ -15,7 +15,7 @@ def positive_sum(arr):
     return c              
 
 
-#O(N)
+# overall time complexity = O(N)
 def friend(listofnames):
      newlist = []                                     #O(1)
      for name in listofnames:                         #O(N)
@@ -25,9 +25,9 @@ def friend(listofnames):
 print(friend(["Ryan", "Kieran", "1234", "Mark"]))
 
 
-#O(logn)
+# overall time complexity = O(NlogN)    => O(NlogN)+O(N)+O(N) = O(NlogN)
 def create_show(fireworks, show_time):
-    fireworks.sort()                                  #O(logn) sorting through a list 
+    fireworks.sort()                                  #O(NlogN), sorting through a list 
     show = []                                         #O(1)
     remaining_time = show_time                        #O(1)
     while remaining_time > 0 and fireworks:           #O(N)
@@ -40,5 +40,5 @@ def create_show(fireworks, show_time):
            else:
               # This firework is too long, 
               # remove it from consideration
-              fireworks.remove(firework)              #O(1)
+              fireworks.remove(firework)              #O(N) at worst
     return show                                      
